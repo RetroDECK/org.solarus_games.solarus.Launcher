@@ -42,7 +42,7 @@ jobs:
             --install-deps-from=flathub-beta \
             --repo=${GITHUB_WORKSPACE}/solarus-repo \
             "${GITHUB_WORKSPACE}"/solarus-build-dir \
-            org.solarus_games.solarus.Launcher.yml
+            org.solarus_games.solarus.Launcher.yaml
 
       - name: "Exporting dir tree"
         id: tree
