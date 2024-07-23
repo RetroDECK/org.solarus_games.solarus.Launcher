@@ -61,6 +61,8 @@ modules:
 
   - name: solarus
     buildsystem: cmake-ninja
+    config-opts:
+      - -DSOLARUS_GUI=OFF
     builddir: true
     post-install:
       - rm ${FLATPAK_DEST}/share/metainfo/org.solarus_games.solarus.appdata.xml
