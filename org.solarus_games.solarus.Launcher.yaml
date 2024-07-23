@@ -2,7 +2,7 @@ app-id: org.solarus_games.solarus.Launcher
 runtime: org.kde.Platform
 runtime-version: "6.7"
 sdk: org.kde.Sdk
-command: solarus-launcher
+command: solarus-run
 finish-args:
   - --share=ipc
   - --socket=wayland
