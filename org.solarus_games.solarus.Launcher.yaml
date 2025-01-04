@@ -1,6 +1,7 @@
 app-id: org.solarus_games.solarus.Launcher
 runtime: org.kde.Platform
 runtime-version: "6.7"
+# runtime-version: '5.15-23.08'
 sdk: org.kde.Sdk
 command: solarus-run
 finish-args:
@@ -30,9 +31,10 @@ modules:
       - /lib/pkgconfig
       - /share/man
     sources:
-      - type: archive
-        url: https://luajit.org/download/LuaJIT-2.0.5.tar.gz
-        sha256: 874b1f8297c697821f561f9b73b57ffd419ed8f4278c82e05b48806d30c1e979
+      - type: git
+        url: https://github.com/LuaJIT/LuaJIT.git
+        tag: v2.0.5
+        commit: 0bf80b07b0672ce874feedcc777afe1b791ccb5a
       - type: shell
         commands:
           - sed -i 's|/usr/local|/app|' ./Makefile
